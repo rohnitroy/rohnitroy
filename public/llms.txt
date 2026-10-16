@@ -1,0 +1,47 @@
+# Rohnit Roy
+
+> Rohnit Roy is a multi-disciplinary product designer and AI Evangelist based in Pune, India, building software solutions and modern interfaces. He is AI Evangelist & Consultant at Fluid.Live, Co-founder & CTO of MelloMinds, and a guest lecturer in Artificial Intelligence at IMED (Bharati Vidyapeeth Deemed University), Pune.
+
+Focus areas: design, experience, AI.
+
+## Quick facts
+
+- Name: Rohnit Roy
+- Based in: Pune, Maharashtra, India
+- Role: Product designer, AI Evangelist & Consultant, startup co-founder, AI guest lecturer
+- Current work: Fluid.Live (AI Evangelist, Aug 2025 – present), MelloMinds (Co-founder & CTO), IMED BVDU (Guest Lecturer, Aug 2026 – present), RudraX Aerospace (UAV IP, testing and development, Aug 2026 – present)
+- Education: MCA (2024 – 2026) and BCA (2021 – 2024), IMED, Bharati Vidyapeeth Deemed University, Pune
+- Website: https://rohnitroy.vercel.app/
+- Contact: rohnitroy.corp@gmail.com
+
+## What he does now
+
+- **AI Evangelist & Consultant at Fluid.Live**: advises organizations on AI adoption and data readiness; delivered 40+ enterprise consultations in 2025. Prototypes practical AI workflows, including local offline model stacks with MCP servers and automated short-form ad content pipelines.
+- **Co-founder & CTO at MelloMinds**: an AI SaaS that helps mental health professionals manage their therapy practice efficiently, with Fort Knox-like security.
+- **Guest Lecturer at IMED (BVDU), Pune**: teaches Theory of Artificial Intelligence to BCA Semester V students.
+- **RudraX Aerospace**: works with government and public-sector ventures on the IP, testing and development of UAVs and tactical UAV modules.
+
+## Career timeline
+
+- **2019**: Co-founded Digitalite Solutions™, a creative marketing agency in Pune that served 100+ brands in social media and influencer marketing (Aug 2019 – Dec 2021).
+- **2020**: Led one of Digitalite's largest campaigns, engaging 15,000+ influencers across India for a single client.
+- **2021–2022**: Built a B2B ecosystem for the retail industry that helped 1,000+ retailers go digital.
+- **2023**: Co-founded AdoSolve InfoTech Pvt. Ltd. (Dec 2023), a tech and content company that became an AI-as-a-Service venture; from 2025 it developed and deployed AI products with Fluid.Live. Stepped down in Aug 2026. Also Non-Executive Director at RN Roy Food & Hospitality LLP (Jun 2023 – present).
+- **2023–2026**: Built YaatriAI at AdoSolve, an AI platform that plans and optimizes vacations and road trips by building travel itineraries.
+- **2026**: Started MelloMinds LLP and began teaching AI/ML to undergraduate students in Pune.
+
+## Certifications
+
+- ACP: Agent Communication Protocol, IBM (2025)
+- No-Code Product Development, Wix Studio (2024)
+- Digital Marketing, Google Digital Garage (2020)
+- Certified Ethical Hacker (CEH), EC-Council (2019, expired 2021)
+
+## Links
+
+- [Website](https://rohnitroy.vercel.app/): portfolio
+- [LinkedIn](https://www.linkedin.com/in/rohnitroy/): professional profile
+- [GitHub](https://github.com/rohnitroy): code
+- [Fluid.Live](https://www.fluid.live): current employer
+- [MelloMinds](https://www.mellominds.co.in): AI SaaS for mental health professionals
+- [RudraX Aerospace](https://www.rudraxaerospace.com): UAV venture

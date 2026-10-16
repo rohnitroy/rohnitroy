@@ -2,14 +2,93 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohnit Roy: Product Designer &amp; AI Evangelist in Pune</title>
     <meta
       name="description"
-      content="Since 2019 I've co-founded Digitalite Solutions, AdoSolve InfoTech and MelloMinds, building AI products, B2B platforms and modern interfaces. I also teach AI/ML in Pune."
+      content="I'm Rohnit Roy, a product designer and AI Evangelist in Pune. Co-founder & CTO of MelloMinds, AI consultant at Fluid.Live and AI guest lecturer at IMED (BVDU)."
     />
+    <meta name="author" content="Rohnit Roy" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://rohnitroy.vercel.app/" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A multi-disciplinary product designer, building software solutions &amp; modern interfaces. - Rohnit Roy</title>
+    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+
+    <!-- Social previews: og-image.jpg is a 1200x630 homepage screenshot, retake it when the hero changes -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Rohnit Roy" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:url" content="https://rohnitroy.vercel.app/" />
+    <meta property="og:title" content="Rohnit Roy: Product Designer &amp; AI Evangelist" />
+    <meta property="og:description" content="Multi-disciplinary product designer building software solutions & modern interfaces. Co-founder & CTO of MelloMinds, AI Evangelist at Fluid.Live." />
+    <meta property="og:image" content="https://rohnitroy.vercel.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rohnit Roy's portfolio: a multi-disciplinary product designer, building software solutions &amp; modern interfaces" />
+    <meta property="profile:first_name" content="Rohnit" />
+    <meta property="profile:last_name" content="Roy" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rohnit Roy: Product Designer &amp; AI Evangelist" />
+    <meta name="twitter:description" content="Multi-disciplinary product designer building software solutions & modern interfaces. Co-founder & CTO of MelloMinds, AI Evangelist at Fluid.Live." />
+    <meta name="twitter:image" content="https://rohnitroy.vercel.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Rohnit Roy's portfolio: a multi-disciplinary product designer, building software solutions &amp; modern interfaces" />
+
+    <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt" />
+
+    <!-- Structured data: who I am, for Google Knowledge Panel + AI answer engines. Keep in sync with README / llms.txt -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://rohnitroy.vercel.app/#website",
+            "url": "https://rohnitroy.vercel.app/",
+            "name": "Rohnit Roy",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://rohnitroy.vercel.app/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://rohnitroy.vercel.app/#profile",
+            "url": "https://rohnitroy.vercel.app/",
+            "name": "Rohnit Roy: Product Designer & AI Evangelist",
+            "isPartOf": { "@id": "https://rohnitroy.vercel.app/#website" },
+            "mainEntity": { "@id": "https://rohnitroy.vercel.app/#person" },
+            "dateModified": "2026-10-17"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://rohnitroy.vercel.app/#person",
+            "name": "Rohnit Roy",
+            "givenName": "Rohnit",
+            "familyName": "Roy",
+            "url": "https://rohnitroy.vercel.app/",
+            "image": "https://rohnitroy.vercel.app/avatar-light.png",
+            "email": "mailto:rohnitroy.corp@gmail.com",
+            "jobTitle": "Product Designer & AI Evangelist",
+            "description": "Multi-disciplinary product designer building software solutions and modern interfaces. AI Evangelist & Consultant at Fluid.Live, Co-founder & CTO of MelloMinds, and guest lecturer in Artificial Intelligence at IMED (BVDU), Pune.",
+            "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+            "worksFor": [
+              { "@type": "Organization", "name": "Fluid.Live", "url": "https://www.fluid.live" },
+              { "@type": "Organization", "name": "MelloMinds", "url": "https://www.mellominds.co.in" },
+              { "@type": "Organization", "name": "RudraX Aerospace", "url": "https://www.rudraxaerospace.com" }
+            ],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Institute of Management and Entrepreneurship Development (IMED), Bharati Vidyapeeth Deemed University",
+              "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" }
+            },
+            "knowsAbout": ["Product design", "UI/UX design", "Artificial intelligence", "AI adoption consulting", "AI SaaS", "Model Context Protocol (MCP)", "Software development", "Influencer marketing", "UAV development"],
+            "sameAs": ["https://www.linkedin.com/in/rohnitroy/", "https://github.com/rohnitroy"]
+          }
+        ]
+      }
+    </script>
+
     <script>
       // Set theme before first paint to avoid a flash
       try {
@@ -20,6 +99,8 @@
         document.documentElement.dataset.theme = 'light'
       }
     </script>
+    <!-- data-theme only exists when JS runs: hide the static copy until React replaces it. No-JS visitors and crawlers still get it -->
+    <style>[data-theme] #root > .static { display: none }</style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,7 +109,43 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Plain-HTML copy for crawlers that don't run JS (GPTBot, ClaudeBot, PerplexityBot...). React wipes it on mount. Keep in sync with README -->
+      <main class="static">
+        <h1>Rohnit Roy: multi-disciplinary product designer, building software solutions &amp; modern interfaces</h1>
+        <p>I'm Rohnit Roy, a product designer and AI Evangelist based in Pune, India. I started my journey in 2019, and since then I've co-founded companies across marketing, retail tech, AI and mental health. Today I work as an AI Evangelist, build AI products, and teach AI to the next generation of developers in Pune.</p>
+
+        <h2>What I'm doing now</h2>
+        <ul>
+          <li><strong>AI Evangelist &amp; Consultant at <a href="https://www.fluid.live">Fluid.Live</a></strong> (Aug 2025 – present): I help organizations adopt AI and get their data ready for it. I delivered 40+ enterprise consultations in 2025.</li>
+          <li><strong>Co-founder &amp; CTO at <a href="https://www.mellominds.co.in">MelloMinds</a></strong>: an AI SaaS that helps mental health professionals manage their therapy practice efficiently, with Fort Knox-like security.</li>
+          <li><strong>Guest Lecturer at IMED (BVDU), Pune</strong> (Aug 2026 – present): I teach Theory of Artificial Intelligence to BCA students.</li>
+          <li><strong>Side quest at <a href="https://www.rudraxaerospace.com">RudraX Aerospace</a></strong>: I work with government and public-sector ventures on the IP, testing and development of UAVs and tactical UAV modules.</li>
+        </ul>
+
+        <h2>My journey</h2>
+        <ul>
+          <li><strong>2019</strong>: Co-founded Digitalite Solutions™, a creative marketing agency that helped 100+ brands with social media and influencer marketing.</li>
+          <li><strong>2020</strong>: Ran one of my career's largest campaigns, with 15,000+ influencers across India for a single client.</li>
+          <li><strong>2021–2022</strong>: Built a B2B ecosystem for the retail industry that helped 1,000+ retailers go digital.</li>
+          <li><strong>2023</strong>: Co-founded AdoSolve InfoTech Pvt. Ltd., a tech and content company that became an AI-as-a-Service venture. From 2025 we developed and deployed AI products with Fluid.Live.</li>
+          <li><strong>2026</strong>: Started MelloMinds LLP and began teaching AI/ML to undergraduate students in Pune.</li>
+        </ul>
+
+        <h2>Education</h2>
+        <ul>
+          <li>Master of Computer Applications (MCA), IMED (Bharati Vidyapeeth Deemed University), Pune · 2024 – 2026</li>
+          <li>Bachelor of Computer Applications (BCA), IMED (Bharati Vidyapeeth Deemed University), Pune · 2021 – 2024</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/rohnitroy/">LinkedIn</a></li>
+          <li><a href="https://github.com/rohnitroy">GitHub</a></li>
+          <li><a href="mailto:rohnitroy.corp@gmail.com">rohnitroy.corp@gmail.com</a></li>
+        </ul>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
