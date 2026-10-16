@@ -13,8 +13,7 @@
     <link rel="canonical" href="https://rohnitroy.vercel.app/" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#faf9f6" />
 
     <!-- Social previews: og-image.jpg is a 1200x630 homepage screenshot, retake it when the hero changes -->
     <meta property="og:type" content="profile" />
@@ -67,7 +66,7 @@
             "givenName": "Rohnit",
             "familyName": "Roy",
             "url": "https://rohnitroy.vercel.app/",
-            "image": "https://rohnitroy.vercel.app/avatar-light.png",
+            "image": "https://rohnitroy.vercel.app/avatar-light.jpg",
             "email": "mailto:rohnitroy.corp@gmail.com",
             "jobTitle": "Product Designer & AI Evangelist",
             "description": "Multi-disciplinary product designer building software solutions and modern interfaces. AI Evangelist & Consultant at Fluid.Live, Co-founder & CTO of MelloMinds, and guest lecturer in Artificial Intelligence at IMED (BVDU), Pune.",
@@ -90,11 +89,9 @@
     </script>
 
     <script>
-      // Set theme before first paint to avoid a flash
+      // Set theme before first paint to avoid a flash. Light by default; dark only if the visitor picked it
       try {
-        var t = localStorage.getItem('theme')
-        document.documentElement.dataset.theme =
-          t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light'
       } catch (e) {
         document.documentElement.dataset.theme = 'light'
       }

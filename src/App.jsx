@@ -631,22 +631,33 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* ponytail: empty placeholder, swap for <img className="avatar" src=... alt="Rohnit Roy" /> */}
+            {/* Real <img> (not a CSS background) so image search can index it. Photo swaps with theme */}
             <div
               className="avatar"
-              aria-hidden="true"
               onPointerEnter={() => {
                 playWoop()
                 navigator.vibrate?.(10) // Android only
               }}
-            />
-            <p className="hero-name">
-              Hello <span role="img" aria-label="waving hand">👋</span> I'm Rohnit Roy
-            </p>
-            <h1 className="hero-title">
-              A multi-disciplinary{' '}
-              <span className="title-icon" aria-hidden="true"><Edit set="bulk" primaryColor="currentColor" /></span>
-              product designer, building software solutions &amp; modern interfaces.
+            >
+              <img
+                src={theme === 'dark' ? '/avatar-dark.jpg' : '/avatar-light.jpg'}
+                alt="Rohnit Roy"
+                width="120"
+                height="120"
+                fetchPriority="high"
+                draggable="false"
+              />
+            </div>
+            {/* One h1 so the name is part of the page's main heading */}
+            <h1 className="hero-heading">
+              <span className="hero-name">
+                Hello <span role="img" aria-label="waving hand">👋</span> I'm Rohnit Roy
+              </span>{' '}
+              <span className="hero-title">
+                A multi-disciplinary{' '}
+                <span className="title-icon" aria-hidden="true"><Edit set="bulk" primaryColor="currentColor" /></span>
+                product designer, building software solutions &amp; modern interfaces.
+              </span>
             </h1>
             {mobile && <AppGrid onOpen={onOpen} />}
           </motion.div>

@@ -160,23 +160,38 @@ html.lenis body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit: cover;
+  overflow: hidden;
+  isolation: isolate; /* blend below stays inside the avatar, grid doesn't show through */
   background: var(--avatar-bg);
   border: 1px solid var(--pill-border);
 }
 
-/* Different photo per theme. Images are pre-cropped square around the face. */
+/* Images are pre-cropped square around the face, one per theme (src set in App.jsx) */
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Light photo is a cutout on a blue sphere with white bg: show it whole, no border,
    so the white blends into the page and the sphere reads as the frame */
 :root[data-theme='light'] .avatar {
-  background: url('/avatar-light.png') center / cover no-repeat var(--bg);
-  border: 0; /* transparent border let the bg repeat into it = thin line at the top edge */
-  /* multiply photo with its own solid --bg layer: white -> off-white, stays opaque (grid doesn't show through) */
-  background-blend-mode: multiply;
+  background: var(--bg);
+  border: 0;
 }
 
-:root[data-theme='dark'] .avatar {
-  background: url('/avatar-dark.jpg') center / cover;
+/* multiply photo with the avatar's solid --bg: white -> off-white */
+:root[data-theme='light'] .avatar img {
+  mix-blend-mode: multiply;
+}
+
+/* name + title share one h1; gap matches .hero's spacing (desktop + phone) */
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: inherit;
 }
 
 .hero-name {
