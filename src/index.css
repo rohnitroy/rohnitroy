@@ -1,0 +1,623 @@
+:root {
+  --font-primary: 'Urbanist', system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive;
+  --grid-size: 48px;
+
+  color-scheme: light;
+  --bg: #faf9f6; /* off-white; warmer = lower last pair, e.g. #f7f5f0 */
+  --fg: #000;
+  --grid-line: rgba(0, 0, 0, 0.06);
+  --pill-bg: #fafafa;
+  --pill-fg: #444;
+  --pill-border: rgba(0, 0, 0, 0.1);
+  --pill-hover: rgba(0, 0, 0, 0.05);
+  --divider: rgba(0, 0, 0, 0.12);
+  --avatar-bg: #ececec;
+  --muted: #777;
+  /* Glass (dock). Lower bg alpha = more see-through */
+  --glass-bg: rgba(255, 255, 255, 0.35);
+  --glass-sheen: rgba(255, 255, 255, 0.5);
+  --glass-edge: rgba(255, 255, 255, 0.7);
+  --glass-shadow: rgba(0, 0, 0, 0.12);
+  --win-bg: #fff;
+  --win-bar: #f3f2ef;
+  --alert-bg: rgba(246, 246, 246, 0.82);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --fg: #fff;
+  --grid-line: rgba(255, 255, 255, 0.06);
+  --pill-bg: #161616;
+  --pill-fg: #ccc;
+  --pill-border: rgba(255, 255, 255, 0.12);
+  --pill-hover: rgba(255, 255, 255, 0.08);
+  --divider: rgba(255, 255, 255, 0.15);
+  --avatar-bg: #1c1c1c;
+  --muted: #888;
+  --glass-bg: rgba(40, 40, 40, 0.35);
+  --glass-sheen: rgba(255, 255, 255, 0.08);
+  --glass-edge: rgba(255, 255, 255, 0.18);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
+  --win-bg: #1e1e1e;
+  --win-bar: #2a2a2a;
+  --alert-bg: rgba(40, 40, 40, 0.82);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Lenis recommended styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.hand {
+  font-family: var(--font-hand);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column; /* pill, then tags under it */
+  align-items: center;
+  gap: 10px;
+  padding: 24px clamp(16px, 4vw, 48px);
+  background: transparent;
+}
+
+/* Center pill: theme | about */
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border: 1px solid var(--pill-border);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.pill-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 32px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--pill-fg);
+  font: 500 16px/1 var(--font-primary);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pill-item:hover {
+  background: var(--pill-hover);
+}
+
+.pill-item:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.pill-item svg {
+  width: 15px;
+  height: 15px;
+}
+
+.pill-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--divider);
+}
+
+/* Section 1 */
+.section-1 {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero: avatar + name */
+.hero {
+  position: relative;
+  top: -6vh; /* nudge above center; more negative = higher */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--avatar-bg);
+  border: 1px solid var(--pill-border);
+}
+
+/* Different photo per theme. Images are pre-cropped square around the face. */
+/* Light photo is a cutout on a blue sphere with white bg: show it whole, no border,
+   so the white blends into the page and the sphere reads as the frame */
+:root[data-theme='light'] .avatar {
+  background: url('/avatar-light.png') center / cover no-repeat var(--bg);
+  border: 0; /* transparent border let the bg repeat into it = thin line at the top edge */
+  /* multiply photo with its own solid --bg layer: white -> off-white, stays opaque (grid doesn't show through) */
+  background-blend-mode: multiply;
+}
+
+:root[data-theme='dark'] .avatar {
+  background: url('/avatar-dark.jpg') center / cover;
+}
+
+.hero-name {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.hero-tags {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.hero-title {
+  max-width: 980px;
+  margin-top: 20px; /* gap below name (adds to .hero gap) */
+  font-size: clamp(32px, 6vw, 50px); /* 50px desktop, shrinks on phones */
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Iconly pen before "product designer"; scales with title font */
+.title-icon {
+  display: inline-block;
+  margin-right: 0.15em;
+  vertical-align: -0.08em; /* ponytail: nudge to sit on the baseline */
+  color: #0a84ff;
+}
+.title-icon svg {
+  width: 0.85em;
+  height: 0.85em;
+}
+
+/* Mac-style dock, fixed bottom center. Icons grow upward out of the bar. */
+.dock {
+  position: fixed;
+  left: 50%;
+  bottom: 80px;
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 24px;
+  /* Apple-style glass: translucent tint + top sheen, blur/saturate what's behind, bright rim, soft drop */
+  background: linear-gradient(to bottom, var(--glass-sheen), transparent 60%) var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%); /* blur = frost strength */
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--glass-edge);
+  box-shadow:
+    inset 0 1px 0 var(--glass-edge),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.08),
+    0 10px 40px var(--glass-shadow);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.dock-slot {
+  position: relative;
+  display: flex;
+}
+
+/* App name capsule above the icon; rides up with magnification since slot grows with the icon */
+.dock-tip {
+  position: absolute;
+  bottom: calc(100% + 10px); /* gap above icon */
+  left: 50%;
+  translate: -50% 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-edge);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 4px 16px var(--glass-shadow);
+  color: var(--fg);
+  font: 500 13px/1.2 var(--font-primary);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s, translate 0.15s;
+}
+
+.dock-slot:hover .dock-tip,
+.dock-slot:focus-within .dock-tip {
+  opacity: 1;
+  translate: -50% 0;
+}
+
+.dock-item {
+  display: block;
+  flex-shrink: 0;
+  overflow: hidden; /* clips icon to rounded tile */
+  border-radius: 22%;
+  background: var(--avatar-bg);
+  border: 1px solid var(--pill-border);
+}
+
+.dock-item svg,
+.dock-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* .own-shape = image already has rounded corners + transparency (Finder, Mail), so drop the tile.
+   Plain square images stay in the tile and get clipped round. */
+.dock-item:has(img.own-shape) {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.dock-divider {
+  align-self: center;
+  width: 1px;
+  height: 60%;
+  margin: 0 4px;
+  background: var(--divider);
+}
+
+/* macOS TextEdit-style window. Centered with inset+margin (not transform) so framer can animate/drag it */
+.txt-window {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  margin: auto;
+  width: min(640px, calc(100vw - 32px));
+  height: min(560px, 75vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--pill-border);
+  background: var(--win-bg);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.txt-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  flex-shrink: 0;
+  background: var(--win-bar);
+  border-bottom: 1px solid var(--pill-border);
+  cursor: grab;
+  user-select: none;
+  touch-action: none; /* lets drag work on touch */
+}
+
+.traffic {
+  position: absolute;
+  left: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+.tl {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.tl-close { background: #ff5f57; cursor: pointer; }
+.tl-min { background: #febc2e; }
+.tl-max { background: #28c840; }
+
+.txt-title {
+  font: 600 13px/1 var(--font-primary);
+  color: var(--pill-fg);
+}
+
+.txt-body {
+  flex: 1;
+  margin: 0;
+  padding: 24px 28px;
+  overflow: auto;
+  font: 400 15px/1.7 var(--font-primary); /* readable prose; swap to ui-monospace for a raw .txt look */
+  color: var(--fg);
+  white-space: pre-wrap;
+}
+
+/* macOS alert panel (Big Sur+ layout): icon, title, message, full-width blue button */
+.mac-alert {
+  position: fixed;
+  inset: 0;
+  z-index: 10000; /* above any number of windows (they count up from 100) */
+  margin: auto;
+  width: 260px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px 16px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid var(--glass-edge);
+  background: var(--alert-bg);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 0.5px rgba(0, 0, 0, 0.15);
+}
+
+.alert-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 22%;
+}
+
+.alert-icon svg,
+.alert-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.alert-title {
+  font: 700 14px/1.3 var(--font-primary);
+  color: var(--fg);
+}
+
+.alert-text {
+  margin: 6px 0 16px;
+  font: 500 12px/1.4 var(--font-primary);
+  color: var(--pill-fg);
+}
+
+.alert-actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Secondary (Exit): neutral grey that works in both themes */
+.alert-btn {
+  flex: 1;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.2);
+  color: var(--fg);
+  font: 600 13px/1 var(--font-primary);
+  cursor: pointer;
+}
+
+.alert-primary {
+  background: #0a84ff;
+  color: #fff;
+}
+
+.alert-btn:focus-visible {
+  outline: 3px solid rgba(10, 132, 255, 0.4);
+  outline-offset: 1px;
+}
+
+/* Phone home grid (iOS home screen style). Only rendered on phones */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 64px);
+  gap: 20px 18px;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 64px;
+  color: var(--fg);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s;
+}
+
+.app:active .app-icon {
+  transform: scale(0.92); /* iOS-like press */
+}
+
+.app-label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; /* long names truncate like iOS */
+  white-space: nowrap;
+  font: 500 11px/1.2 var(--font-primary);
+  color: var(--pill-fg);
+}
+
+/* Phones (same 767px breakpoint as phoneMQ in App.jsx) */
+@media (max-width: 767px) {
+  /* Home: hero sits near the top, compact, grid flows below */
+  .section-1 {
+    align-items: flex-start;
+    padding: 190px 0 48px; /* clears header pill + tags; raise for more gap above avatar */
+  }
+
+  .hero {
+    top: 0;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 76px;
+    height: 76px;
+  }
+
+  .hero-name {
+    font-size: 15px;
+  }
+
+  .hero-title {
+    margin-top: 8px;
+    font-size: 30px;
+  }
+
+  .hero-tags {
+    font-size: 12px;
+  }
+
+  /* .txt windows go full screen like an iOS app */
+  .txt-window {
+    inset: 0 !important; /* beat inline cascade offset */
+    width: 100%;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .txt-bar {
+    height: auto;
+    min-height: 48px;
+    padding-top: env(safe-area-inset-top); /* notch, if viewport-fit=cover */
+    cursor: default;
+  }
+
+  /* bigger tap target around the red close dot */
+  .tl-close {
+    position: relative;
+  }
+  .tl-close::before {
+    content: '';
+    position: absolute;
+    inset: -14px;
+  }
+
+  /* Alerts become iOS-style: no icon, hairline-split text buttons, dimmed screen */
+  .mac-alert {
+    width: 270px;
+    padding: 0;
+    border-radius: 14px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.3); /* dims everything behind */
+  }
+
+  .alert-icon {
+    display: none;
+  }
+
+  .alert-title {
+    padding: 19px 16px 0;
+    font: 600 17px/1.3 var(--font-primary);
+  }
+
+  .alert-text {
+    margin: 2px 0 0;
+    padding: 0 16px 19px;
+    font: 400 13px/1.4 var(--font-primary);
+    color: var(--fg);
+  }
+
+  .alert-actions {
+    gap: 0;
+    border-top: 0.5px solid rgba(128, 128, 128, 0.4);
+  }
+
+  .alert-btn,
+  .alert-primary {
+    height: 44px;
+    border-radius: 0;
+    background: none;
+    color: #0a84ff;
+    font: 400 17px/1 var(--font-primary);
+  }
+
+  .alert-primary {
+    font-weight: 600;
+  }
+
+  .alert-btn + .alert-btn {
+    border-left: 0.5px solid rgba(128, 128, 128, 0.4);
+  }
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: var(--fg);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Full-bleed grid background */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  /* Smooth gradient fade: full at top, gone at bottom. Raise 10% to keep more solid grid on top. */
+  mask-image: linear-gradient(to bottom, #000 10%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 95%);
+}
