@@ -21,7 +21,7 @@
   --glass-shadow: rgba(0, 0, 0, 0.12);
   --win-bg: #fff;
   --win-bar: #f3f2ef;
-  --alert-bg: rgba(246, 246, 246, 0.96);
+  --alert-bg: #f6f6f6;
 }
 
 :root[data-theme='dark'] {
@@ -42,7 +42,7 @@
   --glass-shadow: rgba(0, 0, 0, 0.5);
   --win-bg: #1e1e1e;
   --win-bar: #2a2a2a;
-  --alert-bg: rgba(40, 40, 40, 0.96);
+  --alert-bg: #282828;
 }
 
 * {
