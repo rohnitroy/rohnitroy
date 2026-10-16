@@ -642,14 +642,14 @@ html.lenis body {
   -webkit-mask-image: linear-gradient(to bottom, #000 10%, transparent 95%);
 }
 
-/* Intro loader: white in both themes */
+/* Intro loader: light-theme off-white (--bg) in both themes */
 .loader {
   position: fixed;
   inset: 0;
   z-index: 10000;
   display: grid;
   place-items: center;
-  background: #fff;
+  background: #faf9f6;
   color: #111;
 }
 .loader-pct {
@@ -661,4 +661,15 @@ html.lenis body {
   font-size: 120px;
   line-height: 1;
   font-variant-numeric: tabular-nums;
+}
+/* Phones: percentage sits centered under the icon. Breakpoint matches phoneMQ in App.jsx */
+@media (max-width: 767px) {
+  .loader {
+    align-content: center;
+    gap: 12px;
+  }
+  .loader-pct {
+    position: static;
+    font-size: 15px;
+  }
 }

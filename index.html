@@ -97,7 +97,8 @@
       }
     </script>
     <!-- data-theme only exists when JS runs: hide the static copy until React replaces it. No-JS visitors and crawlers still get it -->
-    <style>[data-theme] #root > .static { display: none }</style>
+    <!-- Loader's off-white until React mounts it, so dark-mode visitors don't get a dark flash first -->
+    <style>[data-theme] #root > .static { display: none } [data-theme] body:has(#root > .static) { background: #faf9f6 }</style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
