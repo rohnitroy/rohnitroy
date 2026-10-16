@@ -1,16 +1,33 @@
-# React + Vite
+# Hey 👋 I'm Rohnit Roy
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A multi-disciplinary product designer, building software solutions & modern interfaces.
 
-Currently, two official plugins are available:
+**design • experience • ai**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I started my journey in 2019, and since then I've co-founded companies across marketing, retail tech, AI and mental health. Today I work as an AI Evangelist, build AI products, and teach AI to the next generation of developers in Pune.
 
-## React Compiler
+## What I'm doing now
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **AI Evangelist & Consultant at [Fluid.Live](https://www.fluid.live)**: I help organizations adopt AI and get their data ready for it. I delivered 40+ enterprise consultations in 2025.
+- **Co-founder & CTO at [MelloMinds](https://www.mellominds.co.in)**: an AI SaaS that helps mental health professionals manage their therapy practice efficiently, with Fort Knox-like security.
+- **Guest Lecturer at IMED (BVDU), Pune**: I teach Theory of Artificial Intelligence to BCA students.
+- **Side quest at [RudraX Aerospace](https://www.rudraxaerospace.com)**: I work with government and public-sector ventures on the IP, testing and development of UAVs and tactical UAV modules.
 
-## Expanding the Oxlint configuration
+## My journey
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **2019**: Co-founded Digitalite Solutions™, a creative marketing agency that helped 100+ brands with social media and influencer marketing.
+- **2020**: Ran one of my career's largest campaigns, with 15,000+ influencers across India for a single client.
+- **2021–2022**: Built a B2B ecosystem for the retail industry that helped 1,000+ retailers go digital.
+- **2023**: Started AdoSolve InfoTech, a tech and content company that became an AI-as-a-Service venture. From 2025 we developed and deployed AI products with Fluid.Live.
+- **2026**: Started MelloMinds LLP and began teaching AI/ML to undergraduate students in Pune.
+
+## Education
+
+- **Master of Computer Applications (MCA)**: IMED (BVDU), Pune · 2024 – 2026
+- **Bachelor of Computer Applications (BCA)**: IMED (BVDU), Pune · 2021 – 2024
+
+## Let's connect
+
+- LinkedIn: [linkedin.com/in/rohnitroy](https://www.linkedin.com/in/rohnitroy/)
+- GitHub: [github.com/rohnitroy](https://github.com/rohnitroy/)
+- Email: [rohnitroy.corp@gmail.com](mailto:rohnitroy.corp@gmail.com)

@@ -508,6 +508,11 @@ html.lenis body {
     font-size: 30px;
   }
 
+  /* header scrolls away with the page instead of staying pinned */
+  .header {
+    position: absolute;
+  }
+
   .hero-tags {
     font-size: 12px;
   }
