@@ -4,7 +4,7 @@ A multi-disciplinary product designer, building software solutions & modern inte
 
 **design • experience • ai**
 
-🌐 **[rohnitroy.vercel.app](https://rohnitroy.com/)**
+🌐 **[www.rohnitroy.com](https://rohnitroy.com/)**
 
 I started my journey in 2019, and since then I've co-founded companies across marketing, retail tech, AI and mental health. Today I work as an AI Evangelist, build AI products, and teach AI to the next generation of developers in Pune.
 
