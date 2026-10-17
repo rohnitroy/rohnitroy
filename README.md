@@ -11,7 +11,6 @@ I started my journey in 2019, and since then I've co-founded companies across ma
 ## What I'm doing now
 
 - **AI Evangelist & Consultant at [Fluid.Live](https://www.fluid.live)**: I help organizations adopt AI and get their data ready for it. I delivered 40+ enterprise consultations in 2025.
-- **Co-founder & CTO at [MelloMinds](https://www.mellominds.co.in)**: an AI SaaS that helps mental health professionals manage their therapy practice efficiently, with Fort Knox-like security.
 - **Guest Lecturer at IMED (BVDU), Pune**: I teach Theory of Artificial Intelligence to BCA students.
 - **Side quest at [RudraX Aerospace](https://www.rudraxaerospace.com)**: I work with government and public-sector ventures on the IP, testing and development of UAVs and tactical UAV modules.
 
