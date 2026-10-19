@@ -20,7 +20,7 @@ I started my journey in 2019, and since then I've co-founded companies across ma
 - **2020**: Ran one of my career's largest campaigns, with 15,000+ influencers across India for a single client.
 - **2021–2022**: Built a B2B ecosystem for the retail industry that helped 1,000+ retailers go digital.
 - **2023**: Started AdoSolve InfoTech, a tech and content company that became an AI-as-a-Service venture. From 2025 we developed and deployed AI products with Fluid.Live.
-- **2026**: Started MelloMinds LLP and began teaching AI/ML to undergraduate students in Pune.
+- **2026**: Began teaching AI/ML to undergraduate students in Pune.
 
 ## Education
 
