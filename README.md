@@ -29,7 +29,7 @@ I started my journey in 2019, and since then I've co-founded companies across ma
 
 ## Let's connect
 
-- Website: [rohnitroy.vercel.app](https://rohnitroy.vercel.app/)
+- Website: [rohnitroy.com](https://rohnitroy.com/)
 - LinkedIn: [linkedin.com/in/rohnitroy](https://www.linkedin.com/in/rohnitroy/)
 - GitHub: [github.com/rohnitroy](https://github.com/rohnitroy/)
 - Email: [rohnitroy.corp@gmail.com](mailto:rohnitroy.corp@gmail.com)
